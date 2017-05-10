@@ -1,6 +1,6 @@
   # First, ascertain how many individuals need to be paired:
   puts "\n"
-  print "How many individuals need to be paired?"
+  print "How many individuals need to be paired? "
   number_of_people=gets.chomp.to_i
   puts "\n"
   puts "So, there are #{number_of_people} to be paired. Okay."
@@ -41,8 +41,10 @@
   end
 
   # Provide for an extra person:
-  if z % 2 == 1
-    i=i+2
+
+  z = (z.to_f/2)
+  if z % 2 != 0
+    i = i + 2
     print "And "
     print my_array[y]
     print " will have to be added to one of the above groups. "
